@@ -9,7 +9,7 @@ Xi386 is an operating system designed for the Intel 80386 (i386) utilizing MBR d
 * 32-bit protected mode fully equipped with C
 
 # Build
-## GCC Cross Compiler
+### GCC Cross Compiler
 For more information, follow the [OSDEV Wiki Tutorial](wiki.osdev.org/GCC_Cross-Compiler).
 Required packages (Debian/Ubuntu copy/paste):
 ```
@@ -37,7 +37,7 @@ export TARGET=i386-elf
 export PATH="$PREFIX/bin:$PATH"
 ```
 3. Build the respective pieces of software.
-## Binutils
+### Binutils
 ```
 # Name this folder whatever you want and place it wherever you want.
 mkdir build-binutils
@@ -48,7 +48,7 @@ cd build-binutils
 make
 make install
 ```
-## GCC
+### GCC
 ```
 # Name this folder whatever you want and place it wherever you want.
 mkdir build-gcc
