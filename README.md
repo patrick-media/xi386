@@ -15,7 +15,6 @@ Required packages (Debian/Ubuntu copy/paste):
 ```
 sudo apt install build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo
 ```
-\
 1. Download GNU GCC & Binutils source code.
 ```
 # Use the most recent version of Binutils. As of writing, mine is 2.43.
