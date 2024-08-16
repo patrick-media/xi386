@@ -1,6 +1,6 @@
-## Xi386
+# Xi386
 Xi386 is an operating system designed for the Intel 80386 (i386) utilizing MBR disk partitioning and no secure boot/UEFI utilities (currently).
-# Current Features:
+## Current Features:
 * In-progress file table & basic filesystem
 * Super awesome ASCII splash screen
 * Startup utilities: safe mode (WIP), real mode terminal (WIP), and resolution changing (WIP)
@@ -8,8 +8,8 @@ Xi386 is an operating system designed for the Intel 80386 (i386) utilizing MBR d
 * Support for VESA BIOS Extensions version 3.0, allowing for a resolution of 1920x1080 @ 32bpp
 * 32-bit protected mode fully equipped with C
 
-## Build
-# GCC Cross Compiler
+# Build
+## GCC Cross Compiler
 For more information, follow the [OSDEV Wiki Tutorial](wiki.osdev.org/GCC_Cross-Compiler).
 Required packages (Debian/Ubuntu copy/paste):
 ```
@@ -37,7 +37,7 @@ export TARGET=i386-elf
 export PATH="$PREFIX/bin:$PATH"
 ```
 3. Build the respective pieces of software.
-# Binutils
+## Binutils
 ```
 # Name this folder whatever you want and place it wherever you want.
 mkdir build-binutils
@@ -48,7 +48,7 @@ cd build-binutils
 make
 make install
 ```
-# GCC
+## GCC
 ```
 # Name this folder whatever you want and place it wherever you want.
 mkdir build-gcc
@@ -64,7 +64,7 @@ make install-target-libgcc
 4. Profit
 The compiler and GNU Binutils should be installed. Check this by running `i386-elf-gcc --version` and `i386-elf-ld --version`. Remember to always add to your PATH (or automate): `export PATH="$HOME/opt/cross/bin:$PATH"` (this is the same as the previous `$PREFIX/bin` that we added earlier, just verbose this time).
 
-## Run
+# Run
 The following are the rules specified in the Makefile:
 ```
 # Assembles and links the bootloader into an intermediate ELF file.
