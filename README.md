@@ -1,6 +1,6 @@
 # Xi386
 Xi386 is an operating system designed for the Intel 80386 (i386) utilizing MBR disk partitioning and no secure boot/UEFI utilities (currently).
-## Current Features:
+### Current Features:
 * In-progress file table & basic filesystem
 * Super awesome ASCII splash screen
 * Startup utilities: safe mode (WIP), real mode terminal (WIP), and resolution changing (WIP)
