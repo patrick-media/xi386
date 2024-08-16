@@ -15,6 +15,7 @@ Required packages (Debian/Ubuntu copy/paste):
 ```
 sudo apt install build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo
 ```
+\
 1. Download GNU GCC & Binutils source code.
 ```
 # Use the most recent version of Binutils. As of writing, mine is 2.43.
@@ -61,7 +62,8 @@ make all-target-libgcc
 make install-gcc
 make install-target-libgcc
 ```
-4. Profit
+4. Profit\
+\
 The compiler and GNU Binutils should be installed. Check this by running `i386-elf-gcc --version` and `i386-elf-ld --version`. Remember to always add to your PATH (or automate): `export PATH="$HOME/opt/cross/bin:$PATH"` (this is the same as the previous `$PREFIX/bin` that we added earlier, just verbose this time).
 
 # Run
@@ -80,4 +82,5 @@ make qemu
 # Executes 'xboot', 'xs2', and 'xpk', compiling/assembling/linking all files into the final ELF and BIN file.
 make all
 ```
+\
 In order to run the system and test that the environment is set up properly, simply type `make qemu`. An ASCII Xi386 logo should appear for several seconds, followed by a blue screen (and possibly text - features are up in the air for now).
