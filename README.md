@@ -12,11 +12,11 @@ Xi386 is an operating system designed for the Intel 80386 (i386) utilizing MBR d
 ### GCC Cross Compiler
 For more information, follow the [OSDEV Wiki Tutorial](wiki.osdev.org/GCC_Cross-Compiler).
 Required packages (Debian/Ubuntu copy/paste):
-```
+```bash
 sudo apt install build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo
 ```
 1. Download GNU GCC & Binutils source code.
-```
+```bash
 # Use the most recent version of Binutils. As of writing, mine is 2.43.
 curl -# -O https://ftp.gnu.org/gnu/binutils/binutils-X.XX.tar.gz
 # Unzip
@@ -28,7 +28,7 @@ curl -# -O https://ftp.gnu.org/gnu/gcc/gcc-XX.X.X.tar.gz
 tar xf gcc-XX.X.X.tar.gz
 ```
 2. Set up environment variables.
-```
+```bash
 # Any path will work, this was what was on the Wiki.
 export PREFIX="$HOME/opt/cross
 # My target is i386 despite the Wiki's suggested i686.
@@ -38,7 +38,7 @@ export PATH="$PREFIX/bin:$PATH"
 ```
 3. Build the respective pieces of software.
 ### Binutils
-```
+```bash
 # Name this folder whatever you want and place it wherever you want.
 mkdir build-binutils
 cd build-binutils
@@ -49,7 +49,7 @@ make
 make install
 ```
 ### GCC
-```
+```bash
 # Name this folder whatever you want and place it wherever you want.
 mkdir build-gcc
 cd build-gcc
@@ -67,7 +67,7 @@ The compiler and GNU Binutils should be installed. Check this by running `i386-e
 
 # Run
 The following are the rules specified in the Makefile:
-```
+```bash
 # Assembles and links the bootloader into an intermediate ELF file.
 make xboot
 # Assembles and links the second stage bootloader into an intermediate ELF file.
