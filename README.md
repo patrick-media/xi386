@@ -3,7 +3,7 @@ Xi386 is an operating system designed for the Intel 80386 (i386) utilizing MBR d
 ### Current Features:
 * In-progress file table & basic filesystem
 * Super awesome ASCII splash screen
-* Startup utilities: safe mode (WIP), real mode terminal (WIP), and resolution changing (WIP)
+* Startup utilities: safe mode (WIP), real mode terminal (WIP), and resolution changing (WIP) <-- lol I promise I'll work on it again soon
 * Full memory map ready for memory virtualization! (VMM coming soon)
 * Support for VESA BIOS Extensions version 3.0, allowing for a resolution of 1920x1080 @ 32bpp
 * 32-bit protected mode fully equipped with C
@@ -17,7 +17,7 @@ sudo apt install build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev t
 ```
 1. Download GNU GCC & Binutils source code.
 ```bash
-# Use the most recent version of Binutils. As of writing, mine is 2.43.
+# Use the most recent version of Binutils. As of writing, it is 2.43.
 curl -# -O https://ftp.gnu.org/gnu/binutils/binutils-X.XX.tar.gz
 # Unzip
 tar xf binutils-X.XX.tar.gz
@@ -29,8 +29,8 @@ tar xf gcc-XX.X.X.tar.gz
 ```
 2. Set up environment variables.
 ```bash
-# Any path will work, this was what was on the Wiki.
-export PREFIX="$HOME/opt/cross
+# Any path should work, this was what was on the Wiki.
+export PREFIX="$HOME/opt/cross"
 # My target is i386 despite the Wiki's suggested i686.
 export TARGET=i386-elf
 # Always add the custom GCC's bin folder to your PATH.
@@ -76,10 +76,10 @@ make xs2
 make xpk
 # Deletes the bin folder, removing all object files.
 make clean
-# Executes 'all' (below), and initiates an instance of qemu-system-i386 with 128 MB of RAM.
-make qemu
 # Executes 'xboot', 'xs2', and 'xpk', compiling/assembling/linking all files into the final ELF and BIN file.
 make all
+# Executes 'all' and initiates an instance of qemu-system-i386 with 128 MB of RAM.
+make qemu
 ```
 \
 In order to run the system and test that the environment is set up properly, simply type `make qemu`. An ASCII Xi386 logo should appear for several seconds, followed by a blue screen (and possibly text - features are up in the air for now).
